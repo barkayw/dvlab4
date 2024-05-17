@@ -1,0 +1,7 @@
+gcloud auth list
+gcloud config list project
+
+mkdir -p modules/instances modules/storage && touch ./main.tf ./variables.tf modules/instances/variables.tf modules/instances/main.tf modules/instances/instances.tf modules/instances/outputs.tf modules/storage/variables.tf modules/storage/main.tf modules/storage/storage.tf modules/storage/outputs.tf 
+
+
+terraform init -migrate-state
