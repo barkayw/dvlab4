@@ -23,6 +23,8 @@ variable "machine_type" {
   description = ""
   type        = string
   default     = "e2-medium"
+  #default     = "e2-standard-2"
+  
 }
 
 variable "boot_disk_image" {
