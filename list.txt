@@ -1,20 +1,22 @@
 
 gcloud auth list
 gcloud config list project
-gcloud config set project [project.ID]
+gcloud config set project [project.ID]\
 
-mkdir -p modules/instances modules/storage && touch ./main.tf ./variables.tf modules/instances/variables.tf modules/instances/main.tf modules/instances/instances.tf modules/instances/outputs.tf modules/storage/variables.tf modules/storage/main.tf modules/storage/storage.tf modules/storage/outputs.tf 
+https://github.com/barkayw/dvlab4.git
 
-# allow_stopping_for_update = true
+## mkdir -p modules/instances modules/storage && touch ./main.tf ./variables.tf modules/instances/variables.tf modules/instances/main.tf modules/instances/instances.tf modules/instances/outputs.tf modules/storage/variables.tf modules/storage/main.tf modules/storage/storage.tf modules/storage/outputs.tf 
 
-# terraform import module.instances-module.google_compute_instance.tf-instance-20 projects/playground-s-11-4b808586/zones/us-central1-c/instances/tf-instance-20
+# terraform import module.instances.google_compute_instance.[tf.name] projects/[project.ID]/zones/[REGION]}/instances/[project.name]
+terraform import module.instances.google_compute_instance.tf-instance-1 projects/playground-s-11-9ddcc15b/zones/us-central1-a/instances/tf-instance-1
+
 # 
-# terraform import google_compute_instance.[tf.name] projects/ [project.ID]/zones/us-central1-c/instances/ [project.name]
 
 
 
+allow_stopping_for_update = true
 terraform init -migrate-state
-# https://github.com/barkayw/dvlab4.git
+
 
 
 

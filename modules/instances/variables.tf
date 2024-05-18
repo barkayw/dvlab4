@@ -15,3 +15,22 @@ variable "zone" {
   type        = string
   default     = ""
 }
+
+
+variable "machine_type" {
+  description = ""
+  type        = string
+  default     = ""
+}
+
+variable "boot_disk_image" {
+  description = ""
+  type        = string
+  default     = ""
+}
+
+variable "network_interface_network" {
+  description = ""
+  type        = string
+  default     = ""
+}
