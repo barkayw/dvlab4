@@ -1,0 +1,14 @@
+
+  491  git branch -a
+  492  git branch -b main
+ # 493  git checkout -b main
+  494  git branch
+ # 495  git commit -m "new1"
+  496  git add -all
+ # 497  git add --all
+  498  git commit -m "new1"
+  499  git branch -d new-branch
+  500  git branch
+ # 501  git remote add origin git@github.com:barkayw/dvlab4.git
+ # 502  git push -u origin main
+  503  git branch
