@@ -5,13 +5,14 @@ terraform {
       version = "5.29.0"
     }
   }
- #   backend "local" {
- #   path = "terraform/state/terraform.tfstate"
- # }
-    backend "gcs" {
-    bucket  = var.project_id
-    prefix  = "terraform/state"
-  }
+
+    backend "local" {
+   path = "terraform/state/terraform.tfstate"
+ }
+#   backend "gcs" {
+#    bucket  = var.project_id
+#    prefix  = "terraform/state"
+#  }
 }
 
 
@@ -48,3 +49,4 @@ module "network" {
     zone = var.zone
   
 }
+
