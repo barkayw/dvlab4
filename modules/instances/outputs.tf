@@ -8,8 +8,8 @@ output "instance-name-2" {
   description = "the instence ID been createed"
 
 }
-output "instance-name-3" {
-  value       = google_compute_instance.tf-instance-3.instance_id
-  description = "the instence ID been createed"
-
-}
+#output "instance-name-3" {
+#  value       = google_compute_instance.tf-instance-3.instance_id
+#  description = "the instence ID been createed"
+#
+#}
