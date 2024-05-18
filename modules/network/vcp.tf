@@ -1,13 +1,27 @@
+module "vpc" {
+    source  = "terraform-google-modules/network/google"
+#    version = "~> 9.1"
 
-module "network" {
-  source  = "terraform-google-modules/network/google"
-  version = "6.0.0"
-  # insert the 3 required variables here
-network_name = ""
-project_id = var.project_id
-subnets = {
-  subnet-02 = "10.10.20.0/24"
-  subnet-01 = "10.10.10.0/24"
-}
+    project_id   = var.project_id
+    network_name = "example-vpc"
+    routing_mode = "GLOBAL"
+
+    subnets = [
+        {
+            subnet_name           = "subnet-01"
+            subnet_ip             = "10.10.10.0/24"
+            subnet_region         = var.region
+          description           = "This subnetsubnet-01"
+        },
+        {
+            subnet_name           = "subnet-02"
+            subnet_ip             = "10.10.20.0/24"
+            subnet_region         = var.region
+            description           = "This subnetsubnet-02"
+        }
+
+    ]
+
+
 
 }
