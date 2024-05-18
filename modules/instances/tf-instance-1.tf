@@ -1,16 +1,16 @@
 resource "google_compute_instance" "tf-instance-1" {
   name         = "tf-instance-1"
-  machine_type = "e2-standard-2"
+  machine_type = var.machine_type
   zone         = var.zone
 
   boot_disk {
     initialize_params {
-      image = "debian-cloud/debian-11"
+      image = var.boot_disk_image
     }
   }
 
   network_interface {
-    network = "default"
+    network = var.network_interface_network
     access_config {
     }
   }
