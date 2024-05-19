@@ -11,6 +11,7 @@ resource "google_compute_instance" "tf-instance-1" {
 
   network_interface {
     network = var.network_interface_network
+  #  network = "module.network.module.vpc.module.vpc.google_compute_network.network"
     access_config {
     }
   }

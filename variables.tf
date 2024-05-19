@@ -8,7 +8,7 @@ variable "project_id" {
 variable "region" {
   description = "The region of the project will be created"
   type        = string
-   default = "us-central1"
+  default     = "us-central1"
 
 }
 
@@ -24,7 +24,7 @@ variable "machine_type" {
   type        = string
   default     = "e2-medium"
   #default     = "e2-standard-2"
-  
+
 }
 
 variable "boot_disk_image" {

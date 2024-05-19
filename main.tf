@@ -5,11 +5,13 @@ terraform {
       version = "5.29.0"
     }
   }
+
   backend "local" {
     path = "terraform/state/terraform.tfstate"
   }
+
   #   backend "gcs" {
-  #    bucket  = var.project_id
+  #    bucket  = "var.project_id" # -> need to insert
   #    prefix  = "terraform/state"
   #  }
 }
@@ -23,20 +25,14 @@ provider "google" {
 }
 
 
-#resource "google_compute_network" "vpc_network" {
-#  name = "terraform-network"
-#}
-
-
-
 module "instances" {
-    source = "./modules/instances"
-    project_id = var.project_id
-    region = var.region
-    zone = var.zone
-    machine_type = var.machine_type
-    boot_disk_image = var.boot_disk_image
-    network_interface_network = var.network_interface_network
+  source                    = "./modules/instances"
+  project_id                = var.project_id
+  region                    = var.region
+  zone                      = var.zone
+  machine_type              = var.machine_type
+  boot_disk_image           = var.boot_disk_image
+  network_interface_network = var.network_interface_network
 
 }
 

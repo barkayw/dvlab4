@@ -2,14 +2,14 @@
 gcloud auth list
 gcloud config list project
 gcloud config set project [project.ID]\
-
-https://github.com/barkayw/dvlab4.git
+git clone https://github.com/barkayw/dvlab4.git
 
 ## mkdir -p modules/instances modules/storage && touch ./main.tf ./variables.tf modules/instances/variables.tf modules/instances/main.tf modules/instances/instances.tf modules/instances/outputs.tf modules/storage/variables.tf modules/storage/main.tf modules/storage/storage.tf modules/storage/outputs.tf 
 
 # terraform import module.instances.google_compute_instance.[tf.name] projects/[project.ID]/zones/[REGION]}/instances/[project.name]
-terraform import module.instances.google_compute_instance.tf-instance-1 projects/playground-s-11-9ddcc15b/zones/us-central1-a/instances/tf-instance-1
+terraform import module.instances.google_compute_instance.tf-instance-1 projects/playground-s-11-7cfb70e1/zones/us-central1-a/instances/tf-instance-1
 
+cp -r dvlab4/* . &&  rm -rf dvlab4/
 # 
 
 
