@@ -36,6 +36,7 @@ module "instances" {
 
 }
 
+
 #module "google_storage_bucket" {
 #    source = "./modules/storage"
 #    project_id = var.project_id
