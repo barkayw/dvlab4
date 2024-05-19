@@ -11,7 +11,8 @@ resource "google_compute_instance" "tf-instance-2" {
 
   network_interface {
     network = var.network_interface_network
-  #  network = "module.network.module.vpc.module.vpc.google_compute_network.network"
+#    network = "https://www.googleapis.com/compute/v1/projects/playground-s-11-7cfb70e1/global/networks/vpc-name"
+#   subnetwork                   = "https://www.googleapis.com/compute/v1/projects/playground-s-11-7cfb70e1/regions/us-central1/subnetworks/subnet-02"
     access_config {
     }
   }
